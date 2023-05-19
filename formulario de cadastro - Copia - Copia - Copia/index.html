@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Formulario de cadastro</title>
+</head>
+<body>
+    <!--Uma div com duas divs dentro para ficarem lado a lado-->
+    <div class="container">
+        <!--Div da esquerda-->
+        <div class="form-image">
+            <img src="assets/img/undraw_static_website_re_x70h.svg">
+        </div>
+        <!--Fim div da esquerda-->
+
+    <!--Div da direita-->
+        <div class="form">
+            <form action="#" id="form">
+                <!--cabeçalho do formulario-->
+                <div class="form-header">
+                    <div class="tittle">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button">
+                        <img src="assets/img/undraw_pic_profile_re_7g2h.svg">
+                    </div>
+                </div>
+                <!-- fim do cabeçalho do formulario-->
+                
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="firstname" class="label-required">Nome</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Digite seu nome" class="required"  oninput="nameValidate()">
+                        <span class="spans">nome deve ter no minimo 3 caracteres</span> 
+                    </div>
+
+                    <div class="input-box">
+                        <label for="lastname" class="label-required">Sobrenome</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Digite seu sobrenome"  class=""> 
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email" class="label-required">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Digite seu email" class="required" oninput="emailValidate()"> 
+                        <span class="spans">digite um email valido</span> 
+                    </div>
+
+                    <div class="input-box">
+                        <label for="number" class="label-required">Celular</label>
+                        <input type="tel" id="number" name="number" placeholder="(xx) xxxx-xxxx" class="required" oninput="telValidate()">
+                        <span class="spans">digite um numero valido</span>  
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password" class="label-required">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" class="required" oninput="mainPasswordValidate()">
+                        <span class="spans">senha deve ter no minimo 8 carcateres</span> 
+                    </div>
+
+                    <div class="input-box">
+                        <label for="Confirmpassword" class="label-required">Confirme sua senha</label>
+                        <input type="password" id="Confirmpassword" name="Confirmpassword" placeholder="digite sua senha" class="required" oninput="comparePassword()">
+                        <span class="spans">as senhas devem ser compativeis</span> 
+                    </div>
+                </div>
+
+                <div class="gender-inputs">
+                    <div class="gender-title">
+                        <h6>Gênero</h6>
+                    </div>
+
+                    <div class="gender-group">
+                        <div class="gender-input">
+                            <input type="radio" id="female" name="gender">
+                            <label for="female">Feminino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input type="radio" id="male" name="gender">
+                            <label for="male">Masculino</label>
+                        </div>
+
+                        <div class="gender-input">
+                            <input type="radio" id="others" name="gender">
+                            <label for="others">Outros</label>
+                        </div>
+
+                       
+                    </div>
+                </div>
+
+                <div class="continue-button">
+                    <button><a href="#" id="submit">Continuar</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
